@@ -2,9 +2,6 @@
 
 $errors = array();
 $data = array();
-include_once '../../../classes/adm.php';
-$adm = new adm();
-$adm->salvar();
 $data['success'] = true;
-
+$data['message'] = "Ok";
 echo json_encode($data);

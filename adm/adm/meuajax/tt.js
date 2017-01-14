@@ -19,7 +19,7 @@ $(document).ready(function() {
             .done(function(data) {
                 
                 if(data.success) {
-                    $('form').append('<div class="alert alert-success">' + data + '</div>');
+                    $('form').append('<div class="alert alert-success">' + data.message + '</div>');
 
                 }
             });
