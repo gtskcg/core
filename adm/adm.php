@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="menu-sup">
-        
+        <a href="?p=postagem/criar_postagem">Nova postagem</a>
     </div>
     <div class="menu-lateral">
         
@@ -18,9 +18,9 @@
         <?php 
             @$p = $_GET['p'];
             if($p == "" || $p == "index" || $p == "index.php") {
-                include_once 'home.php';
+                @include_once 'home.php';
             }else {
-                include_once $p.'.php';
+                @include_once $p.'.php';
             }
         ?>
     </div>
