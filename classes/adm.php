@@ -4,15 +4,16 @@ mb_http_output('UTF-8');
 include_once 'conect.php';
 class adm {
     private $id;
-    private $login;
     private $name;
+    private $surname;
     private $email;
     private $password;
+    private $bios;
     private $con;
     
-    function __construct($id = "", $login = "", $name = "", $email = "", $password = "") {
+    function __construct($id = "", $surname = "", $name = "", $email = "", $password = "") {
         $this->id = $id;
-        $this->login = $login;
+        $this->surname = $surname;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
@@ -23,8 +24,8 @@ class adm {
         return $this->id;
     }
 
-    function getLogin() {
-        return $this->login;
+    function getSurname() {
+        return $this->surname;
     }
 
     function getName() {
@@ -43,8 +44,8 @@ class adm {
         $this->id = $id;
     }
 
-    function setLogin($login) {
-        $this->login = $login;
+    function setSurname($surname) {
+        $this->surname = $surname;
     }
 
     function setName($name) {
@@ -65,8 +66,9 @@ class adm {
 
     public function salvar(){
         try{
-        $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-        VALUES ('John', 'Doe', 'john@example.com')";
+        $senha = sha1('gelatina6972');
+        $sql = "INSERT INTO adm (name, surname, email, password)
+        VALUES ('Gabriel', 'Teixeira', 'gabrielt.s@live.com', '$senha')";
         $this->con->exec($sql);
     
         } catch (PDOException $e) {
@@ -74,9 +76,12 @@ class adm {
         }    
     }
     
-    
-
+    public function logar() {
+        $sql = "SELECT * FROM adm WHERE email = $email AND password = sha1($senha)";
+        $prep = $this->con->prepare($sql);
+        $prep->execute();
+        while ($line > $prep->fetch(PDO::FETCH_NUM)) {
+            echo $line[0];
+        }
+    }
 }
-
-$adm = new adm();
-$adm->salvar();

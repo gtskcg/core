@@ -4,11 +4,11 @@ class Conectar extends PDO{
     private $host = "localhost";
     private $user = "root";
     private $password = "";
-    private $db = "primeiro";
+    private $db = "catartico";
+    
     
     function __construct() {   
-        parent::__construct("mysql:host=$this->host;dbname=$this->db", "$this->user", "$this->password");
-        $this->create_db('primeiro');    
+        parent::__construct("mysql:host=$this->host;dbname=$this->db", "$this->user", "$this->password");            
     }
     
     function connect() {
