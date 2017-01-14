@@ -12,5 +12,7 @@
     </form>
 
     <?php 
-    
+    include_once '../classes/postrels.php';
+    $caat = new Categoria();
+    $caat->consultarchbx();
     } ?>

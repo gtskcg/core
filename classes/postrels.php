@@ -88,6 +88,22 @@ include_once 'conect.php';
                 return "Categoria criada";
             }
         }
+        
+        function lastid() {
+            return $this->con->lastInsertId();
+        }
+        
+        function consultarchbx() {
+            $sql = "SELECT * FROM categoria ORDER BY ID DESC";
+            $query = $this->con->query($sql);
+            if($query->rowCount() > 0) {
+                echo '<div class="cat-list-chk">';
+                    while ($line = $query->fetch(PDO::FETCH_NUM)){
+                        echo "<input type='checkbox' name='categories[]' value='$line[0]'>$line[1]</br>";
+                    }
+                echo '</div>';
+            }
+        }
 
     }
    
