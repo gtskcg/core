@@ -76,12 +76,18 @@ class adm {
         }    
     }
     
-    public function logar() {
-        $sql = "SELECT * FROM adm WHERE email = $email AND password = sha1($senha)";
+    public function logar($email, $senha) {
+        $sql = "SELECT * FROM adm WHERE email = '$email' AND password = sha1('$senha')";
         $prep = $this->con->prepare($sql);
         $prep->execute();
-        while ($line > $prep->fetch(PDO::FETCH_NUM)) {
-            echo $line[0];
-        }
+        if($prep->rowCount() > 0) {
+            while ($line = $prep->fetch(PDO::FETCH_NUM)) {
+                session_start();
+                $_SESSION['user'] = $line[0];
+                header ("Location: adm.php");
+            }
+        }else {
+                echo "algo deu errado";
+            }
     }
 }

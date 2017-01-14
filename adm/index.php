@@ -12,4 +12,18 @@
     }
 
 ?>
-    
+  
+<form method="POST" action="">
+    <input type="text" name="email">
+    <input type="password" name="senha">
+    <input type="submit" name="logar" value="Logar">
+</form>
+<?php 
+    if(isset($_POST['logar'])) {
+        extract($_POST, EXTR_OVERWRITE);
+        include_once '../classes/adm.php';
+        $adm = new adm();
+        $adm->logar($email, $senha);
+    }
+
+?>
