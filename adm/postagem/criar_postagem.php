@@ -11,6 +11,10 @@
            Criar nova postagem
         </h3>
         <input type="text" name="titulo" form="criar-post">
+        <div class="side-wid">
+        <input type="submit" name="salvar" value="Salvar como Racunho">
+        <input type="submit" name="salvar" value="Publicar">
+        </div>
     </div>
     <div class="main-post">
         <textarea name="texto" form="criar-post">

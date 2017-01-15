@@ -1,3 +1,6 @@
+$menucolor:#011627;
+$menutextcolor:#E71D36;
+
 * {
     box-sizing: border-box;
 }
@@ -5,7 +8,8 @@
 body {
     margin:0;
     padding: 0;
-}
+    background: #F0F0F0;//#F5F5F5;
+}   
 
 .main {
     width: 100%;
@@ -25,18 +29,41 @@ body {
     height:100%;
     border:1px solid black;
     float: left;
+    background: $menucolor;
 }
 
 .menu-sup {
     width: 100%;
     height: 50px;
     border:1px solid black;
+    background: $menucolor;
+    color: $menutextcolor;
+    
+    a {
+        color: $menutextcolor;
+        text-decoration: none;
+    }
 }
 
 
 // POST
-.geral-post {
+.post-top {
     overflow: auto;
+    margin-bottom:10px;
+    
+    h3 {
+        margin: 0;
+        margin-right: 10px;
+        float: left;
+    }
+    
+    input[type=text]{
+        width: 66%;
+        height: 22px;
+        float: left;
+        margin-right: 10px;
+    }
+    
 }
 
 .main-post {
@@ -51,4 +78,9 @@ body {
     overflow: auto;
     width: 19%;
     height: auto;
+}
+
+.side-wid {
+    background: white;
+    padding: 10px;
 }
