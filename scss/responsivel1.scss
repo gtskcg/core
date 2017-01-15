@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+$menucolor:#011627;
+$menutextcolor:#E71D36;
+
+@mixin noUlList {
+    ul {
+        margin: 0 auto;
+        list-style: none;
+        padding: 10px;
+        
+        a {
+            text-decoration: none;
+            color: $menutextcolor;
+        }
+    }
+}
+
+$vhheight:100%;
+$min-width:(100% / 10);
+
+* {
+    
+}
+body {
+    margin:0;
+    padding:0;
+    background: #EDEDED;
+}
+
+// MAIN
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+// MENUS
+
+.menu-lateral {
+    height: ($vhheight);
+    float: left;
+    width: $min-width;
+    @include noUlList;
+    background-color: $menucolor;
+}
+
+.menu-sup {
+    width: 100%;
+    
+            color: $menutextcolor;  
+    background-color: $menucolor;
+}
+
+// CONTAINER
+
+.container {
+    float: left;
+    width: (100% - $min-width);
+}
+
+// PÁGINAS
+
+.titulo-pag {
+    background: $menutextcolor;
+    padding:10px;
+    margin-bottom:10px;
+    h3 {
+        margin: 0;
+    }
+    
+}
+
+//POST 
+
+.main-post {
+    width: (100% - ($min-width * 2));
+    float: left;
+  
+    padding-left: 10px;
+    input[type=text] {
+        width: 100%;
+        margin-bottom: 1%;
+    }
+    
+    
+    
+}
+
+.side-post {
+    width: ($min-width * 2);
+    float: left;
+    
+    padding-left: ($min-width / 10);
+    padding-right: ($min-width / 10);
+}
+
+.side-wid {
+    margin-bottom: ($min-width / 10);
+    background: white;
+    overflow: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}

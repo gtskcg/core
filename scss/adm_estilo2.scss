@@ -52,7 +52,7 @@ body {
     
     h3 {
         margin: 0;
-        margin-right: 14px;
+        margin-right:(100%) / (14 * 100) + 1;////percentage((14 * 100)/1016.05)/100;
         float: left;
     }
     
@@ -85,9 +85,12 @@ body {
     margin-bottom: 10px;
     &:first-child{
         input[type=submit] {
-            border-radius: 10%;
+            border-radius: 4px;
             border: none;
-            padding: 5px;  
+            padding: 6px 12px;
+            font-size: 14px;
+            text-align: center;
+            vertical-align: middle;
         }
     }
 }

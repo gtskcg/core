@@ -5,17 +5,26 @@
     }else {
 ?>
 <head>
-    <link href="../css/adm_estilo2.css" rel="stylesheet">
+    <link href="../css/responsivel1.css" rel="stylesheet">
+
 </head>
 <body>
     <div class="main">
         
     <div class="menu-sup">
-        <a href="?p=postagem/criar_postagem">Nova postagem</a>
+        <a href="Links rápidos">Links rápidos</a>
     </div>
 
             <div class="menu-lateral">
-        
+                <ul>
+                    <li><a href="?p=postagem/criar_postagem">Nova postagem</a></li>
+                
+                    <li><a href="#">Link de exemplo</a></li>
+                
+                    <li><a href="#">Link de exemplo</a></li>
+                
+                    <li><a href="#">Link de exemplo</a></li>
+                </ul>
     </div>
         <div class="container">
         <?php 

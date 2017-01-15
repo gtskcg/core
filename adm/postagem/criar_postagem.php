@@ -7,23 +7,24 @@
 /*<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script>tinymce.init({ selector:'textarea' });</script>*/
 ?>
-   
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
+<div class="titulo-pag">
+    <h3>
+        Criar nova postagem
+    </h3>
+</div>
     <div class="main-post">
-         <div class="post-top">
-        <h3>
-           Criar nova postagem
-        </h3>
         <input type="text" name="titulo" form="criar-post">
-        
-    </div>
+    
         <textarea name="texto" form="criar-post">
-            
+                
         </textarea>
     </div>
     <div class="side-post">
         <div class="side-wid">
-        <input type="submit" name="salvar" value="Salvar como Racunho">
-        <input type="submit" name="salvar" value="Publicar">
+            <input type="submit" name="salvar" style="float: left" value="Salvar Racunho">
+        <input type="submit" name="salvar" style="float: right" value="Publicar">
         </div>
         <div class="side-wid">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
