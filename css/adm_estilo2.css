@@ -14,8 +14,7 @@ body {
 
 .container {
   overflow: auto;
-  padding-left: 1%;
-  padding-top: 1%; }
+  padding: 1%; }
 
 .menu-lateral {
   width: 50px;
@@ -39,13 +38,12 @@ body {
   margin-bottom: 10px; }
   .post-top h3 {
     margin: 0;
-    margin-right: 10px;
+    margin-right: 14px;
     float: left; }
   .post-top input[type=text] {
-    width: 66%;
+    width: 82%;
     height: 22px;
-    float: left;
-    margin-right: 10px; }
+    float: left; }
 
 .main-post {
   float: left;
@@ -61,6 +59,12 @@ body {
 
 .side-wid {
   background: white;
-  padding: 10px; }
+  padding: 10px;
+  overflow: auto;
+  margin-bottom: 10px; }
+  .side-wid:first-child input[type=submit] {
+    border-radius: 10%;
+    border: none;
+    padding: 5px; }
 
-/*# sourceMappingURL=adm_estilo1.css.map */
+/*# sourceMappingURL=adm_estilo2.css.map */

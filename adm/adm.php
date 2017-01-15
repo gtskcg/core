@@ -5,7 +5,7 @@
     }else {
 ?>
 <head>
-    <link href="../css/adm_estilo1.css" rel="stylesheet">
+    <link href="../css/adm_estilo2.css" rel="stylesheet">
 </head>
 <body>
     <div class="main">
