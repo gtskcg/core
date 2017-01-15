@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.main {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  border: 1px solid; }
+
+.container {
+  overflow: auto;
+  padding-left: 1%;
+  padding-top: 1%; }
+
+.menu-lateral {
+  width: 50px;
+  height: 100%;
+  border: 1px solid black;
+  float: left; }
+
+.menu-sup {
+  width: 100%;
+  height: 50px;
+  border: 1px solid black; }
+
+.geral-post {
+  overflow: auto; }
+
+.main-post {
+  float: left;
+  width: 80%;
+  height: 80%;
+  margin-right: 1%; }
+
+.side-post {
+  float: left;
+  overflow: auto;
+  width: 19%;
+  height: auto; }
+
+/*# sourceMappingURL=adm_estilo1.css.map */

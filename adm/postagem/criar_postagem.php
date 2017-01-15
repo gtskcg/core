@@ -4,6 +4,21 @@
         echo "Sem acesso";
     }else {
 ?>
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
+    <div class="post-top">
+        <h3>
+           Criar nova postagem
+        </h3>
+        <input type="text" name="titulo" form="criar-post">
+    </div>
+    <div class="main-post">
+        <textarea name="texto" form="criar-post">
+            
+        </textarea>
+    </div>
+    <div class="side-post">
+        <div class="side-wid">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="cat-ajax.js"></script>
     <form id="cat-form" method="POST" action="cat-process.php">
@@ -16,3 +31,5 @@
     $caat = new Categoria();
     $caat->consultarchbx();
     } ?>
+        </div>
+    </div>
