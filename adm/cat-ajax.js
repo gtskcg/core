@@ -16,7 +16,7 @@ $(document).ready(function() {
             .done(function(data) {
                 
                 if(data.success) {
-                    $('.cat-list-chk').prepend("<input type='checkbox' name='categories[]' value='" + data.id + "'>" + $('input[name=cat-name]').val() + "</br>");
+                    $('.cat-list-chk').prepend("<input type='checkbox' name='categories[]' form='criar-post' value='" + data.id + "'>" + $('input[name=cat-name]').val() + "</br>");
 
                 }
             });

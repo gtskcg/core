@@ -11,7 +11,7 @@ include_once 'conect.php';
         private $autor = "";
         private $con;
         
-        function __construct($id, $titulo, $texto, $status, $data, $autor) {
+        function __construct($id = "", $titulo  = "", $texto  = "", $status  = "", $data  = "", $autor  = "") {
             $this->id = $id;
             $this->titulo = $titulo;
             $this->texto = $texto;
@@ -68,6 +68,12 @@ include_once 'conect.php';
         function setAutor($autor) {
             $this->autor = $autor;
         }
+        
+        public function salvar($titulo, $texto, $status, $data, $autor) {
+            $sql = "INSERT INTO post (titulo, texto, status, data, autor) VALUES ('$titulo', '$texto', '$status','$data', '$autor')";
+            $prep = $this->con->prepare($sql);
+            $prep->execute();
+        }
     }
     
     class Categoria {
@@ -99,7 +105,7 @@ include_once 'conect.php';
             if($query->rowCount() > 0) {
                 echo '<div class="cat-list-chk">';
                     while ($line = $query->fetch(PDO::FETCH_NUM)){
-                        echo "<input type='checkbox' name='categories[]' value='$line[0]'>$line[1]</br>";
+                        echo "<input type='checkbox' name='categories[]' form='criar-post' value='$line[0]'>$line[1]</br>";
                     }
                 echo '</div>';
             }
